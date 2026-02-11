@@ -1,0 +1,64 @@
+.debit {
+  &__title {
+    margin: 0 0 16px 0;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+  }
+
+  &__notation {
+    display: block;
+    margin: 0 0 28px 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__list-item {
+
+  }
+
+  &__card {
+    padding: 20px;
+    min-height: 200px;
+    background-color: $color-solitude-1;
+    border-radius: 12px;
+    $root: &;
+
+    &-image {
+      margin-bottom: 9px;
+    }
+
+    &-icon {
+
+    }
+
+    &-title {
+      margin: 0 0 12px 0;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &-description {
+      margin: 0;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    &-link {
+      color: $color-royal-blue-1;
+    }
+  }
+}
