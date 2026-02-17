@@ -1,10 +1,61 @@
 .debit {
+  @include vp-1024 {
+    overflow: hidden;
+  }
+
   &__title {
     margin: 0 0 16px 0;
     font-weight: 600;
     font-size: 26px;
     line-height: 32px;
     letter-spacing: -0.02em;
+    z-index: 1;
+
+    @include vp-768 {
+      font-size: 28px;
+      line-height: 32px;
+      letter-spacing: -0.01em;
+    }
+
+    @include vp-1024 {
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 44px;
+      letter-spacing: -0.04em;
+      text-align: center;
+
+      position: relative;
+      margin: 0 auto 20px auto;
+      max-width: 78%;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: $color-white;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: $color-royal-blue-1;
+        height: 2px;
+        width: 100vw;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -2px);
+        z-index: -2;
+      }
+    }
+
+    @include vp-1304 {
+      max-width: 60%;
+    }
   }
 
   &__notation {
@@ -13,6 +64,24 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
+    color: $color-storm-grey-1;
+
+    @include vp-768 {
+      margin: 0 0 30px 0;
+    }
+
+    @include vp-1024 {
+      display: block;
+      margin: 0 auto 50px auto;
+      width: fit-content;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @include vp-1304 {
+      margin: 0 auto 70px auto;
+    }
   }
 
   &__list {
@@ -22,10 +91,34 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
+    @include vp-768 {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(234px, 1fr));
+      gap: 15px 12px;
+    }
+
+    @media (min-width: 1012px) {
+      grid-template-columns: repeat(auto-fill, minmax(237px, 1fr));
+    }
+
+    @include vp-1024 {
+      grid-template-columns: repeat(auto-fill, minmax(306px, 1fr));
+    }
   }
 
   &__list-item {
+    @include vp-768 {
+      min-height: 280px;
+    }
 
+    @include vp-1024 {
+      min-height: 289px;
+    }
+
+    @include vp-1304 {
+      min-height: 261px;
+    }
   }
 
   &__card {
@@ -35,12 +128,37 @@
     border-radius: 12px;
     $root: &;
 
+    @include vp-768 {
+      padding: 24px;
+      height: 100%;
+    }
+
+    @include vp-1024 {
+      padding: 10px;
+      text-align: center;
+      background-color: $color-white;
+    }
+
     &-image {
       margin-bottom: 9px;
+
+      @include vp-1024 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 21px;
+        padding: 10px;
+        width: 64px;
+        height: 64px;
+        background-color: $color-royal-blue-1;
+        border-radius: 12px;
+      }
     }
 
     &-icon {
-
+      @include vp-1024 {
+        color: $color-white;
+      }
     }
 
     &-title {
@@ -48,6 +166,16 @@
       font-weight: 600;
       font-size: 20px;
       line-height: 24px;
+
+      @include vp-768 {
+        margin: 0 0 11px 0;
+      }
+
+      @include vp-1024 {
+        margin: 0 0 15px 0;
+        font-size: 24px;
+        line-height: 28px;
+      }
     }
 
     &-description {
@@ -55,6 +183,12 @@
       font-weight: 400;
       font-size: 14px;
       line-height: 18px;
+
+      @include vp-1024 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+      }
     }
 
     &-link {

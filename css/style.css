@@ -1190,7 +1190,7 @@ a {
 }
 
 .intro {
-  padding: 0 0 60px 0;
+  padding: 0 0 63px 0;
   overflow: hidden;
 }
 @media (min-width: 1024px) {
@@ -1389,12 +1389,64 @@ a {
   }
 }
 
+@media (min-width: 1024px) {
+  .debit {
+    overflow: hidden;
+  }
+}
 .debit__title {
   margin: 0 0 16px 0;
   font-weight: 600;
   font-size: 26px;
   line-height: 32px;
   letter-spacing: -0.02em;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .debit__title {
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+  }
+}
+@media (min-width: 1024px) {
+  .debit__title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -0.04em;
+    text-align: center;
+    position: relative;
+    margin: 0 auto 20px auto;
+    max-width: 78%;
+  }
+  .debit__title::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #FFFFFF;
+  }
+  .debit__title::after {
+    content: "";
+    position: absolute;
+    background-color: #476BF0;
+    height: 2px;
+    width: 100vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -2px);
+    z-index: -2;
+  }
+}
+@media (min-width: 1304px) {
+  .debit__title {
+    max-width: 60%;
+  }
 }
 .debit__notation {
   display: block;
@@ -1402,6 +1454,27 @@ a {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+  color: #6A6E80;
+}
+@media (min-width: 768px) {
+  .debit__notation {
+    margin: 0 0 30px 0;
+  }
+}
+@media (min-width: 1024px) {
+  .debit__notation {
+    display: block;
+    margin: 0 auto 50px auto;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+@media (min-width: 1304px) {
+  .debit__notation {
+    margin: 0 auto 70px auto;
+  }
 }
 .debit__list {
   display: flex;
@@ -1411,14 +1484,77 @@ a {
   padding: 0;
   list-style: none;
 }
+@media (min-width: 768px) {
+  .debit__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(234px, 1fr));
+    gap: 15px 12px;
+  }
+}
+@media (min-width: 1012px) {
+  .debit__list {
+    grid-template-columns: repeat(auto-fill, minmax(237px, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .debit__list {
+    grid-template-columns: repeat(auto-fill, minmax(306px, 1fr));
+  }
+}
+@media (min-width: 768px) {
+  .debit__list-item {
+    min-height: 280px;
+  }
+}
+@media (min-width: 1024px) {
+  .debit__list-item {
+    min-height: 289px;
+  }
+}
+@media (min-width: 1304px) {
+  .debit__list-item {
+    min-height: 261px;
+  }
+}
 .debit__card {
   padding: 20px;
   min-height: 200px;
   background-color: #F4F6FA;
   border-radius: 12px;
 }
+@media (min-width: 768px) {
+  .debit__card {
+    padding: 24px;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .debit__card {
+    padding: 10px;
+    text-align: center;
+    background-color: #FFFFFF;
+  }
+}
 .debit__card-image {
   margin-bottom: 9px;
+}
+@media (min-width: 1024px) {
+  .debit__card-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 21px;
+    padding: 10px;
+    width: 64px;
+    height: 64px;
+    background-color: #476BF0;
+    border-radius: 12px;
+  }
+}
+@media (min-width: 1024px) {
+  .debit__card-icon {
+    color: #FFFFFF;
+  }
 }
 .debit__card-title {
   margin: 0 0 12px 0;
@@ -1426,11 +1562,30 @@ a {
   font-size: 20px;
   line-height: 24px;
 }
+@media (min-width: 768px) {
+  .debit__card-title {
+    margin: 0 0 11px 0;
+  }
+}
+@media (min-width: 1024px) {
+  .debit__card-title {
+    margin: 0 0 15px 0;
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
 .debit__card-description {
   margin: 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+}
+@media (min-width: 1024px) {
+  .debit__card-description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 .debit__card-link {
   color: #476BF0;
