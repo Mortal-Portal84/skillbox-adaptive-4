@@ -1450,7 +1450,7 @@ a {
 }
 .debit__notation {
   display: block;
-  margin: 0 0 28px 0;
+  margin: 0 0 24px 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -1480,7 +1480,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin: 0;
+  margin: 0 0 60px 0;
   padding: 0;
   list-style: none;
 }
@@ -1489,6 +1489,7 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(234px, 1fr));
     gap: 15px 12px;
+    margin: 0 0 76px 0;
   }
 }
 @media (min-width: 1012px) {
@@ -1499,6 +1500,12 @@ a {
 @media (min-width: 1024px) {
   .debit__list {
     grid-template-columns: repeat(auto-fill, minmax(306px, 1fr));
+    margin: 0 0 70px 0;
+  }
+}
+@media (min-width: 1304px) {
+  .debit__list {
+    margin: 0 0 90px 0;
   }
 }
 @media (min-width: 768px) {
@@ -1589,6 +1596,84 @@ a {
 }
 .debit__card-link {
   color: #476BF0;
+}
+.debit__banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px 0 20px 21px;
+  margin: 0 0 48px 0;
+  background-color: #DDF1FF;
+  border-radius: 16px;
+}
+@media (min-width: 768px) {
+  .debit__banner {
+    padding: 25px 24px;
+    margin: 0 0 76px 0;
+  }
+}
+@media (min-width: 1024px) {
+  .debit__banner {
+    padding: 48px 100px;
+  }
+}
+@media (min-width: 1304px) {
+  .debit__banner {
+    margin: 0 0 60px 0;
+    padding: 48px 120px;
+  }
+}
+.debit__banner-title {
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+}
+@media (min-width: 768px) {
+  .debit__banner-title {
+    margin: 0 0 6px 0;
+  }
+}
+@media (min-width: 1024px) {
+  .debit__banner-title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+.debit__banner-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+@media (min-width: 1024px) {
+  .debit__banner-text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.debit__banner-picture {
+  display: block;
+  max-width: 125px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .debit__banner-picture {
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+    max-width: 174px;
+  }
+}
+@media (min-width: 1024px) {
+  .debit__banner-picture {
+    max-width: 260px;
+  }
+}
+@media (min-width: 1304px) {
+  .debit__banner-picture {
+    right: 15%;
+  }
 }
 
 .bonus {
