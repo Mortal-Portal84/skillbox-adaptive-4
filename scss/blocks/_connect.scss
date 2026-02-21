@@ -107,7 +107,12 @@
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none !important;
 
+    &:hover, &:focus-visible {
+      background-color: $color-solitude-1;
+    }
 
     @include vp-360 {
       padding: 11px 25px;

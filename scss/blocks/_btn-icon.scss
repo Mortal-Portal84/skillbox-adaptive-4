@@ -12,6 +12,14 @@
   background-color: transparent;
   cursor: pointer;
 
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:hover svg, &:focus-visible svg {
+    color: $color-free-speech-blue;
+  }
+
   &__icon {
     width: 24px;
     height: 24px;

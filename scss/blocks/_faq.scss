@@ -83,11 +83,11 @@
 
     @include vp-1024 {
       max-width: 700px;
-      gap: 14px 0;
+      gap: 11px 0;
     }
 
     @include vp-1304 {
-      gap: 16px 0;
+      gap: 14px 0;
     }
   }
 
@@ -115,7 +115,7 @@
 
   &__button {
     width: 100%;
-    padding: 15px 0;
+    padding: 14px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -125,11 +125,17 @@
     text-align: left;
     color: $color-black-russian;
     background-color: transparent;
-    border: 0;
+    border: 1px solid transparent;
+    border-radius: 12px;
     cursor: pointer;
+    outline: none !important;
+
+    &:focus-visible {
+      border-color: $color-free-speech-blue;
+    }
 
     @include vp-768 {
-      padding: 19px 0;
+      padding: 17px 0 19px;
     }
 
     @include vp-1024 {

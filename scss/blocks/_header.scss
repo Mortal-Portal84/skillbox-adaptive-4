@@ -44,6 +44,7 @@
     &:hover,
     &:focus-visible {
       color: $color-free-speech-blue;
+      outline: none;
     }
   }
 
@@ -83,7 +84,8 @@
 
     &:hover,
     &:focus-visible {
-      color: $color-royal-blue-1;
+      color: $color-free-speech-blue;
+      outline: none;
     }
 
     @include vp-1024 {
@@ -123,6 +125,7 @@
 
   &__search {
     margin: 0 20px 0 0;
+    outline: none;
 
     @include vp-1024 {
       margin: 0 28px 0 0;

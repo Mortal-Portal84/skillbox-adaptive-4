@@ -28,6 +28,7 @@
 
   .btn {
     width: 100%;
+    outline: none;
 
     @include vp-1024 {
       width: 110px;

@@ -10,6 +10,11 @@
     border: 1px solid $color-periwinkle;
     border-radius: 10px;
     outline: none;
+    transition: border-color 0.3s ease;
+
+    &:hover, &:focus-visible, &:focus {
+      border-color: $color-royal-blue-1;
+    }
 
     @include vp-768 {
       padding: 29px 19px 9px 19px;

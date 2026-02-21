@@ -20,12 +20,21 @@
     }
   }
 
+  &__input:focus-visible + .custom-checkbox__label .custom-checkbox__field {
+    border-color: $color-royal-blue-1;
+  }
+
   &__label {
     display: flex;
     align-items: flex-start;
     gap: 12px;
     cursor: pointer;
+
+    &:hover .custom-checkbox__field {
+      border-color: $color-royal-blue-1;
+    }
   }
+
 
   &__field {
     width: 20px;
@@ -37,6 +46,7 @@
     border: 1px solid $color-periwinkle-2;
     border-radius: 4px;
     background-color: $color-white;
+    transition: all 0.3s ease-in-out;
   }
 
   &__icon {
@@ -53,5 +63,11 @@
 
   &__link {
     color: $color-royal-blue-1;
+    outline: none;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-free-speech-blue;
+    }
   }
 }
