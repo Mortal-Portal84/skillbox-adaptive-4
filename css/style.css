@@ -2170,14 +2170,15 @@ a {
 }
 @media (min-width: 1024px) {
   .benefit__wrapper {
-    padding: 40px 60px;
+    padding: 41px 60px;
   }
 }
 @media (min-width: 1304px) {
   .benefit__wrapper {
-    padding: 80px;
+    padding: 55px 55px 13px 80px;
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
   }
 }
 @media (min-width: 1304px) {
@@ -2193,8 +2194,19 @@ a {
     margin: 0 auto 40px auto;
   }
 }
+@media (min-width: 1024px) {
+  .benefit__image {
+    width: 320px;
+  }
+}
+@media (min-width: 1304px) {
+  .benefit__image {
+    width: 100%;
+  }
+}
 @media (min-width: 1304px) {
   .benefit__content {
+    padding-top: 26px;
     max-width: 560px;
   }
 }
@@ -2243,6 +2255,33 @@ a {
 @media (min-width: 1024px) {
   .benefit__list {
     margin: 0 0 40px 0;
+  }
+}
+.benefit__item {
+  position: relative;
+  padding-left: 30px;
+  list-style: none;
+}
+.benefit__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../images/sprite/icon-accepted.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+}
+@media (min-width: 768px) {
+  .benefit__item:not(:last-child) {
+    margin-bottom: 2px;
+  }
+}
+@media (min-width: 1304px) {
+  .benefit__item:not(:last-child) {
+    margin-bottom: 1px;
   }
 }
 .benefit__text {
