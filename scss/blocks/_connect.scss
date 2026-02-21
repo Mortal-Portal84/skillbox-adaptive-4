@@ -125,6 +125,10 @@
     &.is-active {
       color: $color-white;
       background-color: $color-black-russian;
+
+      &:hover, &:focus-visible {
+        background-color: $color-bunting;
+      }
     }
   }
 
@@ -230,5 +234,11 @@
 
   &__link {
     color: $color-royal-blue-1;
+    outline: none;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-free-speech-blue;
+    }
   }
 }

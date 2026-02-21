@@ -551,6 +551,9 @@ a {
 .header .header__login {
   display: none;
 }
+.header .header__login:hover, .header .header__login:focus-visible {
+  background-color: #DBDFEC;
+}
 @media (min-width: 1024px) {
   .header .header__login {
     display: flex;
@@ -2092,6 +2095,9 @@ a {
   color: #FFFFFF;
   background-color: #1E222E;
 }
+.connect__tabs-control.is-active:hover, .connect__tabs-control.is-active:focus-visible {
+  background-color: #2B3144;
+}
 .connect__list {
   counter-reset: counter;
   list-style: none;
@@ -2199,6 +2205,10 @@ a {
 }
 .connect__link {
   color: #476BF0;
+  outline: none;
+}
+.connect__link:hover, .connect__link:focus-visible {
+  color: #3356D7;
 }
 
 .benefit {
