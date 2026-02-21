@@ -897,12 +897,6 @@ a {
 
 .custom-input {
   position: relative;
-  width: 330px;
-}
-@media (min-width: 768px) {
-  .custom-input {
-    width: 728px;
-  }
 }
 .custom-input__field {
   width: 100%;
@@ -1044,7 +1038,7 @@ a {
   background-color: #FFF2EB;
   border-radius: 16px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .bonus-card {
     min-height: 294px;
     justify-content: space-between;
@@ -1085,6 +1079,7 @@ a {
   color: #FFFFFF;
   background-color: #1E222E;
   border-radius: 12px;
+  white-space: nowrap;
 }
 .bonus-card__title {
   margin: 0;
@@ -1092,7 +1087,7 @@ a {
   font-size: 20px;
   line-height: 24px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .bonus-card__title {
     max-width: 180px;
     font-size: 28px;
@@ -1110,7 +1105,7 @@ a {
   font-size: 16px;
   line-height: 22px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .bonus-card__text {
     max-width: 180px;
   }
@@ -1136,7 +1131,7 @@ a {
   display: none;
   flex-shrink: 0;
 }
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .bonus-card__image {
     display: block;
   }
@@ -1610,17 +1605,18 @@ a {
 @media (min-width: 768px) {
   .debit__banner {
     padding: 25px 24px;
-    margin: 0 0 76px 0;
+    margin: 0 0 61px 0;
   }
 }
 @media (min-width: 1024px) {
   .debit__banner {
+    margin: 0 0 103px 0;
     padding: 48px 100px;
   }
 }
 @media (min-width: 1304px) {
   .debit__banner {
-    margin: 0 0 60px 0;
+    margin: 0 0 123px 0;
     padding: 48px 120px;
   }
 }
@@ -1679,7 +1675,7 @@ a {
 .bonus {
   margin: 0 0 60px 0;
 }
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .bonus {
     margin: 0 0 100px 0;
   }
@@ -1703,7 +1699,7 @@ a {
     line-height: 32px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .bonus__title {
     max-width: 700px;
     margin: 0 auto 40px auto;
@@ -1726,7 +1722,7 @@ a {
   flex-direction: column;
   gap: 16px 0;
 }
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .bonus__list {
     flex-direction: row;
     gap: 0 16px;
@@ -1737,7 +1733,7 @@ a {
     gap: 0 20px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .bonus__item {
     width: calc(50% - 8px);
   }
@@ -1763,7 +1759,7 @@ a {
 }
 @media (min-width: 1024px) {
   .application__wrapper {
-    padding: 56px 60px 60px 60px;
+    padding: 55px 60px 60px 60px;
     background-color: #F4F6FA;
     border-top: 8px solid #476BF0;
     border-radius: 16px;
@@ -2041,6 +2037,7 @@ a {
   background-color: #1E222E;
 }
 .connect__list {
+  counter-reset: counter;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -2060,6 +2057,7 @@ a {
   }
 }
 .connect__list-item {
+  counter-increment: counter;
   display: flex;
   align-items: flex-start;
   gap: 0 12px;
@@ -2082,6 +2080,7 @@ a {
   }
 }
 .connect__list-item::before {
+  content: counter(counter);
   width: 48px;
   height: 48px;
   display: flex;
@@ -2110,15 +2109,6 @@ a {
     font-size: 28px;
     line-height: 32px;
   }
-}
-.connect__list-item:first-child::before {
-  content: "1";
-}
-.connect__list-item:nth-child(2)::before {
-  content: "2";
-}
-.connect__list-item:last-child::before {
-  content: "3";
 }
 .connect__item-title {
   margin: 0 0 8px 0;

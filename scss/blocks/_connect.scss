@@ -124,6 +124,7 @@
   }
 
   &__list {
+    counter-reset: counter;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -142,6 +143,7 @@
   }
 
   &__list-item {
+    counter-increment: counter;
     display: flex;
     align-items: flex-start;
     gap: 0 12px;
@@ -161,6 +163,7 @@
     }
 
     &::before {
+      content: counter(counter);
       width: 48px;
       height: 48px;
       display: flex;
@@ -187,18 +190,6 @@
         font-size: 28px;
         line-height: 32px;
       }
-    }
-
-    &:first-child::before {
-      content: "1";
-    }
-
-    &:nth-child(2)::before {
-      content: "2";
-    }
-
-    &:last-child::before {
-      content: "3";
     }
   }
 

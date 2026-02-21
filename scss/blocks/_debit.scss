@@ -215,15 +215,16 @@
 
     @include vp-768 {
       padding: 25px 24px;
-      margin: 0 0 76px 0;
+      margin: 0 0 61px 0;
     }
 
     @include vp-1024 {
+      margin: 0 0 103px 0;
       padding: 48px 100px;
     }
 
     @include vp-1304 {
-      margin: 0 0 60px 0;
+      margin: 0 0 123px 0;
       padding: 48px 120px;
     }
 
